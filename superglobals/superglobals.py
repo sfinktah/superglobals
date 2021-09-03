@@ -14,7 +14,6 @@ def getglobal(key, default=None):
     _globals = dict(inspect.getmembers(
                 inspect.stack()[len(inspect.stack()) - 1][0]))["f_globals"]
     return _globals.get(key, default)
-    pass
 
 def setglobal(key, value):
     _globals = superglobals()
